@@ -16,7 +16,9 @@ func main() {
 
 	// switchCase()
 
-	arrays()
+	// arrays()
+
+	maps()
 }
 
 func loop() {
@@ -45,11 +47,36 @@ func switchCase() {
 func arrays() {
 	var messages []string = []string{"Hello", "darkness", "my", "old", "friend"}
 
-    fmt.Printf("type of messages is %T\n", messages)
+	fmt.Printf("type of messages is %T\n", messages)
 
 	fmt.Println(messages)
 
-    fmt.Println("length of messages: " +fmt.Sprint(len(messages)))
+	fmt.Println("length of messages: " + fmt.Sprint(len(messages)))
 
-    fmt.Println("capacity of messages: " +fmt.Sprint(cap(messages)))
+	fmt.Println("capacity of messages: " + fmt.Sprint(cap(messages)))
+}
+
+type Color struct {
+	R, G, B int
+}
+
+func maps() {
+	var colors = map[string]Color{
+        "green": {
+            G: 255,
+        },
+    }
+
+    colors["red"] = Color{R: 255}
+
+	fmt.Println(colors)
+
+
+    colors["blue"] = Color{B: 255}
+
+    fmt.Println("blue: " + fmt.Sprint(colors["blue"]))
+
+    _, ok := colors["red"]
+
+    fmt.Println("Is red a key in colors? " + fmt.Sprint(ok))
 }
