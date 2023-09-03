@@ -14,7 +14,9 @@ func main() {
 
 	// loop();
 
-	switchCase()
+	// switchCase()
+
+	arrays()
 }
 
 func loop() {
@@ -38,4 +40,16 @@ func switchCase() {
 	default:
 		fmt.Println(os)
 	}
+}
+
+func arrays() {
+	var messages []string = []string{"Hello", "darkness", "my", "old", "friend"}
+
+    fmt.Printf("type of messages is %T\n", messages)
+
+	fmt.Println(messages)
+
+    fmt.Println("length of messages: " +fmt.Sprint(len(messages)))
+
+    fmt.Println("capacity of messages: " +fmt.Sprint(cap(messages)))
 }
